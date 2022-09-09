@@ -150,7 +150,7 @@ function multiArray(array1, array2){
         avg2 += array2[i] / array2.length;
     } 
     
-    if (avg1 > avg2){
+    if (avg1 > avg2){ //avg1 = 33 //avg2 = 3.5
         return true;
     } else {
         return false;
@@ -164,7 +164,35 @@ function multiArray(array1, array2){
 let isHotOutside = true;
 moneyInPocket = 10.51;
 
-function willBuyDrink(weather, money)
+function willBuyDrink(boolean, money){
+    if(boolean === true && money >= 10.50){
+        return true;
+    } else {
+        return false;
+    }
+} console.log(willBuyDrink(isHotOutside, moneyInPocket));
 
 
 // Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+function isPrime(num) //this function determines whether or not the passed number is a prime number or not
+{
+
+  if (num === 1) {
+    return false;
+}
+  else if(num === 2) {
+    return true;
+  }else
+{
+    for(var i = 2; i < num; i++) {
+      if(num % i === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
+}
+
+console.log(isPrime(37));
